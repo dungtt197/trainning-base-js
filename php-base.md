@@ -175,29 +175,174 @@ Session lưu trữ dữ liệu người dùng trên nhiều trang, còn cookie l
 ---
 
 ## <a id="10-lap-trinh-huong-doi-tuong-oop">10. Lập Trình Hướng Đối Tượng (OOP)</a>
-
 OOP trong PHP bao gồm lớp, đối tượng, constructor và phương thức.
 
-### Ví dụ:
+
+
+### Các tính chất của OOP
+
+1. **Tính đóng gói (Encapsulation)** - Bảo vệ dữ liệu bên trong lớp, chỉ cho phép truy cập thông qua các phương thức được định nghĩa.
+
+2. **Tính kế thừa (Inheritance)** - Lớp con có thể kế thừa các thuộc tính và phương thức từ lớp cha.
+
+3. **Tính đa hình (Polymorphism)** - Một phương thức có thể hoạt động khác nhau tùy vào lớp con kế thừa.
+
+4. **Tính trừu tượng (Abstraction)** - Che giấu chi tiết thực hiện của một lớp và chỉ hiển thị những gì cần thiết.
+
+
+
+### Ví dụ về OOP:
+
 ```php
+
 <?php
-  class Xe {
-      public $hang;
-      function setHang($hang) {
-          $this->hang = $hang;
-      }
-      function getHang() {
-          return $this->hang;
-      }
-  }
-  $xe = new Xe();
-  $xe->setHang("Toyota");
-  echo $xe->getHang();
+
+class Xe {
+
+    protected $hang;
+
+    
+
+    public function __construct($hang) {
+
+        $this->hang = $hang;
+
+    }
+
+    
+
+    public function getHang() {
+
+        return $this->hang;
+
+    }
+
+}
+
+
+
+class Oto extends Xe {
+
+    private $soCho;
+
+    
+
+    public function __construct($hang, $soCho) {
+
+        parent::__construct($hang);
+
+        $this->soCho = $soCho;
+
+    }
+
+    
+
+    public function getThongTin() {
+
+        return "Hãng: " . $this->getHang() . ", Số chỗ: " . $this->soCho;
+
+    }
+
+}
+
+
+
+$xe = new Oto("Toyota", 5);
+
+echo $xe->getThongTin();
+
 ?>
+
 ```
 
+
+
+### Abstract Class và Interface
+
+
+
+**Abstract Class** là một lớp trừu tượng không thể khởi tạo trực tiếp, chỉ có thể được kế thừa.
+
+
+
+```php
+
+<?php
+
+abstract class DongVat {
+
+    abstract public function keu();
+
+}
+
+
+
+class Cho extends DongVat {
+
+    public function keu() {
+
+        return "Gâu gâu";
+
+    }
+
+}
+
+$cho = new Cho();
+
+echo $cho->keu();
+
+?>
+
+```
+
+
+
+**Interface** định nghĩa các phương thức mà lớp triển khai nó phải có.
+
+
+
+```php
+
+<?php
+
+interface HanhDong {
+
+    public function diChuyen();
+
+}
+
+
+
+class Meo implements HanhDong {
+
+    public function diChuyen() {
+
+        return "Mèo đi bằng 4 chân";
+
+    }
+
+}
+
+$meo = new Meo();
+
+echo $meo->diChuyen();
+
+?>
+
+```
+
+
+
 ### Bài Tập:
-- Tạo một lớp `Nguoi` với các thuộc tính `ten` và `tuoi`, và một phương thức hiển thị thông tin.
+
+- Tạo một abstract class `DongVat` với phương thức `keu()`, sau đó tạo lớp `Chim` kế thừa từ `DongVat` và triển khai phương thức `keu()`.
+
+- Viết một interface `HinhHoc` với phương thức `tinhDienTich()`, sau đó tạo lớp `HinhVuong` và `HinhTron` triển khai interface này.
+
+
+
+---
+
 
 ---
 
