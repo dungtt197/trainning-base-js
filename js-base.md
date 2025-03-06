@@ -8,7 +8,7 @@
 - [Session 5: Mảng và Object](#session-5)
 - [Session 6: DOM và Sự Kiện](#session-6)
 - [Session 7: Bất Đồng Bộ (Async & Promise)](#session-7)
-
+- [Session 8: Project cuối khóa](#session-8)
 ---
 
 ## <a id="session-1"></a> Session 1: Giới thiệu JavaScript & Biến, Kiểu Dữ Liệu
@@ -143,5 +143,26 @@ getData();
 
 ### 7.1. Bài tập thực hành
 Viết một hàm trả về `Promise` sau 3 giây, khi hoàn thành sẽ log "Hoàn thành!".
+
+[🔝 Quay lại đầu trang](#mục-lục)
+
+---
+
+## <a id="session-8"></a> Project Cuối Khóa
+### 8.1. Mô tả
+- Xây dựng một ứng dụng web đơn giản sử dụng các kiến thức đã học.
+- Ứng dụng bao gồm các tính năng: hiển thị thông tin, xử lý sự kiện, và tương tác với người dùng.
+
+### 8.2. Yêu cầu
+- Sử dụng HTML, CSS và JavaScript.
+- Tạo một trang web có giao diện đơn giản.
+- Sử dụng DOM để thay đổi nội dung trang web khi người dùng tương tác.
+- Sử dụng ít nhất một hàm và một vòng lặp trong mã JavaScript.
+- Sử dụng Promise hoặc async/await để xử lý bất đồng bộ.
+
+### 8.3. Gợi ý
+- Tạo một trang web hiển thị danh sách công việc cần làm (To-Do List).
+- Cho phép người dùng thêm, xóa và đánh dấu hoàn thành công việc.
+- Lưu trữ danh sách công việc trong bộ nhớ cục bộ (localStorage).
 
 [🔝 Quay lại đầu trang](#mục-lục)
