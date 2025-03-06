@@ -12,7 +12,7 @@
 8. <a href="#8-xu-ly-tep">Xử Lý Tệp</a>
 9. <a href="#9-session-va-cookie">Session và Cookie</a>
 10. <a href="#10-lap-trinh-huong-doi-tuong-oop">Lập Trình Hướng Đối Tượng (OOP)</a>
-
+11. <a href="#11-project-cuoi-khoa">Project cuối khóa</a>
 ---
 
 ## <a id="1-gioi-thieu-php">1. Giới Thiệu PHP</a>
@@ -342,6 +342,25 @@ echo $meo->diChuyen();
 
 
 ---
+
+## <a id="11-project-cuoi-khoa">11. Project Cuối Khóa</a>
+### 11.1. Mô tả
+- Xây dựng một ứng dụng web đơn giản sử dụng các kiến thức đã học.
+- Ứng dụng bao gồm các tính năng: hiển thị thông tin, xử lý sự kiện, và tương tác với người dùng.
+
+### 11.2. Yêu cầu
+- Sử dụng HTML, CSS và PHP.
+- Tạo một trang web có giao diện đơn giản.
+- Sử dụng PHP để xử lý dữ liệu từ form và hiển thị kết quả.
+- Sử dụng ít nhất một hàm và một vòng lặp trong mã PHP.
+- Sử dụng session hoặc cookie để lưu trữ thông tin người dùng.
+
+### 11.3. Gợi ý
+- Tạo một trang web quản lý danh sách công việc (To-Do List).
+- Cho phép người dùng thêm, xóa và đánh dấu hoàn thành công việc.
+- Lưu trữ danh sách công việc trong session hoặc cơ sở dữ liệu.
+
+[🔝 Quay lại đầu trang](#mục-lục)
 
 
 ---
